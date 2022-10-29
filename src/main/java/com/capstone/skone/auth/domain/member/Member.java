@@ -44,6 +44,9 @@ public class Member implements UserDetails {
   @Column(name = "auth")
   private String auth;
 
+  @Column(name = "nickname")
+  private String nickname;
+
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
     Set<GrantedAuthority> roles = new HashSet<>();
@@ -63,6 +66,9 @@ public class Member implements UserDetails {
     return password;
   }
 
+  public String getNickname() {
+    return nickname;
+  }
 
   @Override
   public boolean isAccountNonExpired() {

@@ -98,4 +98,11 @@ public class BoarderController {
     model.addAttribute("detail", detail);
     return "board/hot_deal_board_details";
   }
+
+  @GetMapping("/board/del")
+  public String deleteBoard(@LoginSession)
+
+
+
+
 }
