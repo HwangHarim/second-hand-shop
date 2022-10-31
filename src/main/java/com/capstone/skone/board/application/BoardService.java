@@ -26,6 +26,7 @@ public class BoardService {
   private final FileRepository fileRepository;
   private final HotDealRepository hotDealRepository;
 
+  // 게시글 번호로 검색 기능
   public Optional<Board> findByBoard(Long id) {
     return boardRepository.findById(id);
   }
@@ -63,6 +64,7 @@ public class BoardService {
         updateBoardRequest.getPrice());
   }
 
+  // id로 삭제
   public void deleteBoard(Long id) {
     boardRepository.deleteById(id);
   }
@@ -85,6 +87,7 @@ public class BoardService {
     return boardRepository.findAll(pageable);
   }
 
+  // 키워드 검색 기능
   @Transactional
   public List<Board> keywordSearch(String title) {
     return boardRepository.findByTitleContaining(title);

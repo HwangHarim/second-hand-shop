@@ -452,6 +452,7 @@ hidden으로 숨겨줘야됨*/
           </svg>
         </a>
 
+<<<<<<< HEAD
         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
           <li>
             <a href="#" class="nav-link text-secondary">
@@ -495,6 +496,99 @@ hidden으로 숨겨줘야됨*/
           </li>
         </ul>
       </div>
+=======
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="/" class="nav-link text-secondary">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                홈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/chat/room" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
+                                채팅
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/hot_deal" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                핫딜
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                경매
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#people-circle"></use>
+                                </svg>
+                                Customers
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                    <input type="search" class="form-control" placeholder="물품 검색" aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-light text-dark me-2">로그인</button>
+                    <button type="button" class="btn btn-primary">회원가입</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mx-auto" style="width: 400px; height:400px;">
+        <div class="card mb-3">
+            <!--상품 사진-->
+            <div class="text-center">
+               <img  th:src="|/static/files/${detail.getFilename()}|" class="rounded" alt="..." width=400px, height=400px>
+            </div>
+
+            <div class="card" style="width: 400px; ">
+                <div class="card-body">
+                    <!--프로필 사진-->
+                    <div class="box" style="background: #ffffff;">
+                        <img class="profile" th:src="|/static/img/test1.PNG|" alt="...">
+                    </div>
+                    <div>
+                        <h5 class="card-name" th:text="${detail.getNickname()}">수영하는 철새</h5>
+                    </div>
+
+                    <hr />
+                    <h5 class="card-title" th:text="${detail.getTitle()}">마인크래프트 무드등</h5>
+                    <h7 class="card-subtitle mb-2 text-muted">가전제품</h7>
+                    <h5 class="card-Price" th:text="${detail.getPrice()}">29,000원</h5>
+                    <br />
+                    <p class="card-text" th:text="${detail.getContent()}">마인크래프트 무드등입니다. 사용한지 얼마 안됐으며 급하게 처분하느라 올립니다.
+                        관심있는 분은 1:1 채팅 걸어주세요 </p>
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-chat">1:1채팅</button>
+                    <!--btn-chat-->
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-report">신고</button>
+                    <!--btn-report-->
+                </div>
+            </div>
+        </div>
+        <br />
+>>>>>>> 627844bdc0d322ec6a31ae4d5310db661a3757ab
     </div>
   </div>
   <div class="px-3 py-2 border-bottom mb-3">

@@ -35,10 +35,18 @@ public class ChatRoomController {
     return chatService.AllChatRooms();
   }
 
+<<<<<<< HEAD
   //채팅방 생성
   @PostMapping(value = "room", consumes = MediaType.APPLICATION_JSON_VALUE)
   public ChatRoomInfo createRoom(@RequestBody ChatRoomNameDto name) {
     return chatService.createRoom(name.getName());
+=======
+  // 채팅방 생성
+  @PostMapping("room")
+  @ResponseBody
+  public ChatRoom createRoom(@RequestParam String name) {
+    return chatService.createRoom(name);
+>>>>>>> 627844bdc0d322ec6a31ae4d5310db661a3757ab
   }
 
   // 채팅방 입장 화면

@@ -105,6 +105,7 @@ public class BoarderController {
     return "board/hot_deal_board_details";
   }
 
+<<<<<<< HEAD
   @PostMapping("/board/remove")
   public String  boardRemove(@ModelAttribute("createBoardDto") CreateBoardDto createBoardDto, Authentication auth, HttpServletRequest request) throws Exception{
 
@@ -123,4 +124,12 @@ public class BoarderController {
     }
     return "redirect:/";
   }
+=======
+  @GetMapping("/board/del")
+  public String deleteBoard(@LoginSession)
+
+
+
+
+>>>>>>> 627844bdc0d322ec6a31ae4d5310db661a3757ab
 }
