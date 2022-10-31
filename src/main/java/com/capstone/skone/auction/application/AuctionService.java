@@ -4,6 +4,7 @@ import com.capstone.skone.auction.domain.Auction;
 import com.capstone.skone.auction.domain.BidInfo;
 import com.capstone.skone.auction.infrastructure.AuctionRepository;
 import com.capstone.skone.auction.infrastructure.BidInfoRepository;
+import com.capstone.skone.auction.util.AuctionTimeThread;
 import com.capstone.skone.auth.domain.member.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -23,6 +24,7 @@ public class AuctionService {
 
     public void createAuction(Auction auction){
         auctionRepository.save(auction);
+        AuctionTimeThread auctionTimeThread = new AuctionTimeThread(auction, auctionRepository);
     }
 
     public Page<Auction> getAllAuction(Pageable pageable){

@@ -2,6 +2,8 @@ package com.capstone.skone.auction.util;
 
 import com.capstone.skone.auction.domain.Auction;
 import com.capstone.skone.auction.infrastructure.AuctionRepository;
+import com.capstone.skone.mail.MailSender;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,9 +18,17 @@ public class AuctionTimeThread {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                System.out.println("옥션 종료");
-                auctionRepository.deleteById(auction.getAuctionNumber());
+                try {
+                    System.out.println("옥션 종료");
+                    MailSender mailSender = new MailSender();
+                    mailSender.sendMail();
 
+                    auctionRepository.deleteById(auction.getAuctionNumber());
+
+                }
+                catch (EmptyResultDataAccessException e){
+                    System.out.println("이미 종료된 경매글입니다. = " + e);
+                }
             }
         };
 

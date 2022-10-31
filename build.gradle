@@ -38,7 +38,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 //	implementation group: 'org.springframework.session', name: 'spring-session-data-redis', version: '2.7.0'
 //	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis'
-
+	implementation group: 'javax.mail', name: 'javax.mail-api', version: '1.6.2'
+	implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
 
 	//websocket
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
